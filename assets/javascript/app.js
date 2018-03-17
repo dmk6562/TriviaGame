@@ -57,7 +57,7 @@ function loadQuestion(){
 	intervalId = setInterval(decrement, 3000);
 }
 
-// prevent time remaining from going negative
+//prevents time remaining from going negative
 function getTimeRemaining(timer){
 	if(timer > 0){
 		return timer;
@@ -66,11 +66,11 @@ function getTimeRemaining(timer){
 	}
 }
 
-//Countdown begin
+//Countdown begins
 function decrement(){
 	timer --;
 	
-	//Display on DOM
+//Display on DOM
 	$("#correctAnswer").text('');
 	$("#answersBox").show();
 	$("#timeRemaining").text(getTimeRemaining(timer));
@@ -121,7 +121,7 @@ function rightAnswer(){
 	if (questionIndex === (triviaQuestion.size-1)){
 	setTimeout(endGame, 3000);
 	}
-	//Load another question if last question has not been reached
+//Loads another question if last question has not been reached
 	else {
 	questionIndex ++;
 	setTimeout(loadQuestion, 3000);
@@ -205,3 +205,4 @@ function endGame(){
 
 });
 
+//Still working on getting click function for answer choive to work.
